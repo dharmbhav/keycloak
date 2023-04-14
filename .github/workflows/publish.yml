@@ -10,7 +10,7 @@ uses: docker/login-action@v1
 with:
 registry: ghcr.io
 username: dharmbhav
-password: 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
+password: ${{ secrets.GITHUB_TOKEN }}
 - name: Build the keycloak-docker Docker image
 run: |
        docker build . --tag ghcr.io/dharmbhav/keycloak-docker-gcr-demo:latest
